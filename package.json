@@ -1,0 +1,24 @@
+{
+  "name": "circleci-beanstalk",
+  "version": "0.1.0",
+  "description": "An example application how to use Beanstalk with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "keywords": [
+    "node",
+    "beanstalk",
+    "express",
+    "github",
+    "circleci"
+  ],
+  "author": "Kevin Goedecke",
+  "license": "MIT"
+}
