@@ -7,7 +7,7 @@ jobs:
             - checkout
             - run:
                 name: EC2-SSH
-                command: ssh -o "StrictHostKeyChecking no" ubuntu@52.14.134.134 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
+                command: ssh -o "StrictHostKeyChecking no" ubuntu@13.59.11.141 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
             #- run:
                # name: Run AWS EBS Instance
                # command: ssh -o "StrictHostKeyChecking no" ubuntu@52.14.134.134 "cd ~/profile-store;git pull;pip install --upgrade --user awsebcli;eb --version" 
