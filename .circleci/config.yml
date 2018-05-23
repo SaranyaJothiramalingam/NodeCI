@@ -15,7 +15,7 @@ jobs:
                      echo "Installing python-pip"
                      sudo easy_install pip
                      sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
-                     pip install --upgrade --user awsebcli
+                     sudo pip install --upgrade --user awsebcli
                      eb --version
                      #echo "Creating EBS Instance"
                      #eb init --platform node.js --region us-west-2 --profile test
