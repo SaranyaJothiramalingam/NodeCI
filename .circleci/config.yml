@@ -9,14 +9,14 @@ jobs:
                 #name: EC2-SSH
                 #command: ssh -v -o ubuntu@18.220.25.125 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
             - run:
-                name: Run AWS EC2 Instance
+                name: Run AWS EBS Instance
                 shell: /bin/sh
                 command: |
                      echo "Installing python-pip"
                      sudo easy_install pip
                      sudo apt install python-pip
                      pip install --upgrade --user awsebcli
-                     eb --version
-                     echo "Creating EBS Instance"
-                     eb init --platform node.js --region us-west-2 --profile test
-                     eb create circleci 
+                     #eb --version
+                     #echo "Creating EBS Instance"
+                     #eb init --platform node.js --region us-west-2 --profile test
+                     #eb create circleci 
