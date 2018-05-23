@@ -15,7 +15,6 @@ jobs:
                      echo "Installing python-pip"
                      sudo easy_install pip
                      sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
-                     sudo pip3 install --upgrade awsebcli
                      #sudo pip install --upgrade --user awsebcli
                      eb --version
                      #echo "Creating EBS Instance"
