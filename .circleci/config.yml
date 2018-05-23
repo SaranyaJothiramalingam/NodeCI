@@ -12,13 +12,15 @@ jobs:
                 name: Run AWS EBS Instance
                 shell: /bin/sh
                 command: |
-                     echo "Installing python-pip"
-                     sudo easy_install pip
-                     sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
-                     sudo pip install --upgrade --user awsebcli
-                     eb --version
-                     #echo "Creating EBS Instance"
-                     #eb init --platform node.js --region us-west-2 --profile test
-                     #eb create circleci 
+                        echo "Installing python-pip"
+            	        sudo apt-get install -y python-pip
+            	        curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+            	        unzip awscli-bundle.zip
+            	        echo "Installing awscli"
+            	        sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+            	        echo "check aws version"
+            	        aws --version
+            	        echo "Creating EC2 Instance"
+            	        aws ec2 run-instances --image-id ami-10186f7c --count 1 --instance-type t2.micro --key-name circleci --security-group-ids sg-9f365af8 --region us-east-2
                      
                      
