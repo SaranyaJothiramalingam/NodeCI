@@ -12,10 +12,8 @@ jobs:
                 name: Run AWS EBS Instance
                 shell: /bin/sh
                 command: |
-                     echo "Installing python-pip"
-                     sudo easy_install pip
                      sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
-                     curl -O https://bootstrap.pypa.io/get-pip.py
+                     sudo pip install awsebcli
                      sudo pip install --upgrade --user awsebcli
                      eb --version
                      #echo "Creating EBS Instance"
