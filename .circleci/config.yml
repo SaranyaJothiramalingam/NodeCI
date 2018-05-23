@@ -15,6 +15,7 @@ jobs:
                      echo "Installing python-pip"
                      sudo easy_install pip
                      sudo apt install python-pip
+                     sudo apt-get install libffi-dev
                      pip install --upgrade --user awsebcli
                      eb --version
                      #echo "Creating EBS Instance"
