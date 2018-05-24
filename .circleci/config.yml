@@ -12,11 +12,12 @@ jobs:
                 name: Run AWS EC2 Instance
                 shell: /bin/sh
                 command: |
-                     sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
-                     sudo pip install awsebcli
-                     sudo pip install --upgrade --user awsebcli
+                     #sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
+                     #sudo pip install awsebcli
+                    # sudo pip install --upgrade --user awsebcli
                      eb --version
                      #eb init --platform node.js --region us-west-2 --profile test
-                     eb init --region us-west-2 --platform node.js appname
-                     eb create test
+                     #eb init --region us-west-2 --platform node.js appname
+                    # eb create test
+                     eb deploy test
                      
