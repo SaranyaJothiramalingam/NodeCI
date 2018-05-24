@@ -18,5 +18,5 @@ jobs:
                      eb --version
                      #eb init --platform node.js --region us-west-2 --profile test
                      eb init --platform node.js --region us-west-2 --profile test
-                     eb create my-env
+                     eb create test
                      
