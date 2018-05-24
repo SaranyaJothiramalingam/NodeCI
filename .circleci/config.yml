@@ -16,6 +16,6 @@ jobs:
                      sudo pip install awsebcli
                      sudo pip install --upgrade --user awsebcli
                      eb --version
-                     eb init 
+                     eb init -i
                      eb create circleci 
                      
