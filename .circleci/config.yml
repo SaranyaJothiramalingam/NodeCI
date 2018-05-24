@@ -5,17 +5,17 @@ jobs:
             - image: circleci/node:7
         steps:
             - checkout
+          #  - run:
+            #    name: EC2-SSH
+             #   command: ssh -o "StrictHostKeyChecking no" ubuntu@18.220.25.125 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
             - run:
-                name: EC2-SSH
-                command: ssh -o "StrictHostKeyChecking no" ubuntu@18.220.25.125 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
-            - run:
-                name: Run AWS EBS Instance
+                name: Run AWS EC2 Instance
                 shell: /bin/sh
                 command: |
                      sudo apt-get update && sudo apt-get install -y python-pip libpython-dev
                      sudo pip install awsebcli
                      sudo pip install --upgrade --user awsebcli
                      eb --version
-                     eb init --platform node.js --region us-west-2 --profile test
+                     eb init 
                      eb create circleci 
                      
