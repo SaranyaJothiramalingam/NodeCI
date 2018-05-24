@@ -17,6 +17,7 @@ jobs:
                      sudo pip install --upgrade --user awsebcli
                      eb --version
                      #eb init --platform node.js --region us-west-2 --profile test
-                     eb init --region  us-west-2 --environment-name my-env
+                     #eb init --region  us-west-2 --environment-name my-env
+                     eb init
                      eb create my-env
                      
