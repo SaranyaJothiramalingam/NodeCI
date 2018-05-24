@@ -16,6 +16,6 @@ jobs:
                      sudo pip install awsebcli
                      sudo pip install --upgrade --user awsebcli
                      eb --version
-                     eb init -i
+                     eb init --platform node.js --region us-west-2 --profile test
                      eb create circleci 
                      
