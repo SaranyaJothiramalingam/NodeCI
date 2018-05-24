@@ -7,7 +7,7 @@ jobs:
             - checkout
             - run:
                 name: EC2-SSH
-                command: ssh -v -o ubuntu@18.220.25.125 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
+                command: ssh -v ubuntu@18.220.25.125 "cd ~/profile-store; git pull; sudo apt-get install -y nodejs;sudo apt-get install -y npm;sudo npm install"
             - run:
                 name: Run AWS EBS Instance
                 shell: /bin/sh
