@@ -17,7 +17,7 @@ jobs:
                      sudo pip install --upgrade --user awsebcli
                      eb --version
                      #eb init --platform node.js --region us-west-2 --profile test
-                     eb init --region us-east-2 --platform node.js --key-name circleci CITest --vpc.securitygroups sg-dc22ceb6
+                     eb init --region us-east-2 --platform node.js --keyname circleci CITest --vpc.securitygroups sg-dc22ceb6
                      eb create test
                      eb deploy test
                      eb open
