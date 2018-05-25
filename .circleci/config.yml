@@ -18,7 +18,7 @@ jobs:
                      eb --version
                      #eb init --platform node.js --region us-west-2 --profile test
                      eb init --region us-east-2 --platform node.js appname --keyname circleci
-                     eb create test
-                     eb deploy test
+                     eb create testci
+                     eb deploy testci
                      eb open
                      
